@@ -38,15 +38,7 @@ namespace View
 
             firstNameTextBox.Text = user.FirstName;
 
-            DateTime date = user.BornDate;
-
-            string dateString = String.Format("{0}.{1}.{2}",
-                date.Year.ToString(),
-                date.Month.ToString(),
-                date.Day.ToString()
-                );
-
-            bornDateTextBox.Text = dateString;
+            dateEdit1.DateTime = user.BornDate;
 
             bornPlaceTextBox.Text = user.BornPlace;
 
@@ -65,16 +57,11 @@ namespace View
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            DateTime date;
+            dateEdit1.DoValidate();
 
-            if (DateTime.TryParse(bornDateTextBox.Text, out date))
-            {
-                ModifyData(date);
-            }
-            else
-            {
-                MessageBox.Show("Kérlek ebben a formátumban add meg a dátumot: év.hónap.nap");
-            }
+            DateTime date = dateEdit1.DateTime;
+
+            ModifyData(date);
         }
 
         private void ModifyData(DateTime date)
@@ -105,6 +92,11 @@ namespace View
             }
 
             this.Close();
+        }
+
+        private void dateEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -32,7 +32,6 @@
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.surnameTextBox = new System.Windows.Forms.TextBox();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
-            this.bornDateTextBox = new System.Windows.Forms.TextBox();
             this.bornPlaceTextBox = new System.Windows.Forms.TextBox();
             this.cityTextBox = new System.Windows.Forms.TextBox();
             this.userNameLabel = new System.Windows.Forms.Label();
@@ -43,6 +42,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
+            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // userNameTextBox
@@ -72,13 +74,6 @@
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(233, 26);
             this.firstNameTextBox.TabIndex = 3;
-            // 
-            // bornDateTextBox
-            // 
-            this.bornDateTextBox.Location = new System.Drawing.Point(314, 565);
-            this.bornDateTextBox.Name = "bornDateTextBox";
-            this.bornDateTextBox.Size = new System.Drawing.Size(233, 26);
-            this.bornDateTextBox.TabIndex = 4;
             // 
             // bornPlaceTextBox
             // 
@@ -169,11 +164,25 @@
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
+            // dateEdit1
+            // 
+            this.dateEdit1.EditValue = null;
+            this.dateEdit1.Location = new System.Drawing.Point(314, 568);
+            this.dateEdit1.Name = "dateEdit1";
+            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit1.Size = new System.Drawing.Size(233, 28);
+            this.dateEdit1.TabIndex = 16;
+            this.dateEdit1.EditValueChanged += new System.EventHandler(this.dateEdit1_EditValueChanged);
+            // 
             // EditUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 1109);
+            this.Controls.Add(this.dateEdit1);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -184,13 +193,14 @@
             this.Controls.Add(this.userNameLabel);
             this.Controls.Add(this.cityTextBox);
             this.Controls.Add(this.bornPlaceTextBox);
-            this.Controls.Add(this.bornDateTextBox);
             this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.surnameTextBox);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.userNameTextBox);
             this.Name = "EditUserForm";
             this.Text = "EditUserForm";
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +212,6 @@
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox surnameTextBox;
         private System.Windows.Forms.TextBox firstNameTextBox;
-        private System.Windows.Forms.TextBox bornDateTextBox;
         private System.Windows.Forms.TextBox bornPlaceTextBox;
         private System.Windows.Forms.TextBox cityTextBox;
         private System.Windows.Forms.Label userNameLabel;
@@ -213,5 +222,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button saveButton;
+        private DevExpress.XtraEditors.DateEdit dateEdit1;
     }
 }
