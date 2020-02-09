@@ -1,0 +1,12 @@
+D:\source\hazifeladat2\Model\bin\Debug\Model.dll
+D:\source\hazifeladat2\Model\bin\Debug\Model.pdb
+D:\source\hazifeladat2\Model\bin\Debug\Common.dll
+D:\source\hazifeladat2\Model\bin\Debug\DataLayer.dll
+D:\source\hazifeladat2\Model\bin\Debug\Common.pdb
+D:\source\hazifeladat2\Model\bin\Debug\DataLayer.pdb
+D:\source\hazifeladat2\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\source\hazifeladat2\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\source\hazifeladat2\Model\obj\Debug\Model.csproj.CopyComplete
+D:\source\hazifeladat2\Model\obj\Debug\Model.dll
+D:\source\hazifeladat2\Model\obj\Debug\Model.pdb
+D:\source\hazifeladat2\Model\bin\Debug\adatok.csv
